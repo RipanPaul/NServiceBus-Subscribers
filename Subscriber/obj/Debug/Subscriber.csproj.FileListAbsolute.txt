@@ -53,4 +53,3 @@ E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Su
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.csproj.CoreCompileInputs.cache
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.exe
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.pdb
-E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.csprojResolveAssemblyReference.cache

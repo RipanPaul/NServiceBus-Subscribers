@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Messages;
+using NServiceBus.Persistence.Sql;
+using System.Data.SqlClient;
 
 namespace Subscriber
 {
@@ -22,16 +24,29 @@ namespace Subscriber
         static async Task InitiazeQueue(string EndpointName_Subscriber, string EndpointName_Publisher)
         {
             var endpointConfiguration = new EndpointConfiguration(EndpointName_Subscriber);
-            endpointConfiguration.UsePersistence<InMemoryPersistence>();
+            endpointConfiguration.SendFailedMessagesTo("error");
+            endpointConfiguration.EnableInstallers();
 
+            // Persistence
+            var persistence = endpointConfiguration.UsePersistence<SqlPersistence>();
+            var connection = @"Data Source=RIPANPC\SqlExpress;Initial Catalog=TestMsmqDB;UID=sa;Password=Password123;Integrated Security=True";
+            persistence.SqlVariant(SqlVariant.MsSqlServer);
+            persistence.ConnectionBuilder(
+                connectionBuilder: () =>
+                {
+                    return new SqlConnection(connection);
+                });
+
+            var subscriptions = persistence.SubscriptionSettings();
+            subscriptions.CacheFor(TimeSpan.FromDays(1));
+
+            // Transport
             var transport = endpointConfiguration.UseTransport<MsmqTransport>();
             var routing = transport.Routing();
             routing.RegisterPublisher(
                 assembly: typeof(RowMessage).Assembly,
                 publisherEndpoint: EndpointName_Publisher);
 
-            endpointConfiguration.SendFailedMessagesTo("error");
-            endpointConfiguration.EnableInstallers();
 
             var endpointInstance = await Endpoint.Start(endpointConfiguration)
                 .ConfigureAwait(false);
