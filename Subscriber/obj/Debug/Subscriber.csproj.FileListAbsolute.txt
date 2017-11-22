@@ -50,6 +50,7 @@ E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Su
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\bin\Debug\NServiceBus.Core.xml
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\bin\Debug\NServiceBus.Persistence.Sql.pdb
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\bin\Debug\NServiceBus.Persistence.Sql.xml
+E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.csprojResolveAssemblyReference.cache
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.csproj.CoreCompileInputs.cache
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.exe
 E:\OfficeWork\NServiceBusMSMQ_N\Implementation-GitHub\NServiceBus-Subscribers\Subscriber\obj\Debug\Subscriber.pdb
